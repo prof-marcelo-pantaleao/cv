@@ -1,0 +1,166 @@
+/* --- 1. RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- 2. VARIAVEIS E FONTES (Motivação Matemática/Tecnológica) --- */
+/* Cores inspiradas em lousa (fundo escuro), giz (texto claro) e destaque de fórmulas (azul/amarelo) */
+:root {
+    --color-bg: #f8f8f8; /* Fundo claro para o corpo */
+    --color-dark: #2c3e50; /* Azul escuro/quase preto (cor principal) */
+    --color-primary: #3498db; /* Azul primário (Destaque/Ícones) */
+    --color-secondary: #e74c3c; /* Vermelho/Laranja para contraste */
+    --color-text: #333;
+    --color-card-bg: #ffffff;
+    --font-heading: 'Georgia', serif; 
+    --font-body: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+/* --- 3. HEADER (CABEÇALHO) - O 'HERO' --- */
+.hero {
+    background-color: var(--color-dark);
+    color: #ecf0f1; /* Cor de giz/texto claro */
+    padding: 60px 20px;
+    text-align: center;
+    /* Imagem de fundo opcional: adicione um padrão sutil de grade ou fórmulas matemáticas */
+    /* background-image: url('math-pattern.svg'); */
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8em;
+    margin-bottom: 5px;
+    color: var(--color-primary); /* Destaque para o nome */
+}
+
+.hero h2 {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contact-info span {
+    display: block; /* Empilha no mobile */
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* --- 4. LAYOUT PRINCIPAL E RESPONSIVIDADE --- */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: var(--color-card-bg);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--color-primary); /* Destaque de seção */
+}
+
+.section-title {
+    color: var(--color-primary);
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+.section-title i {
+    margin-right: 10px;
+}
+
+/* --- 5. DETALHES DE CONTEÚDO --- */
+.experience-item {
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-left: 3px solid var(--color-dark);
+}
+
+.experience-item h4 {
+    margin-bottom: 2px;
+    color: var(--color-dark);
+}
+
+.experience-item p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+/* Qualificações Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.skill-item h4 {
+    color: var(--color-secondary);
+    margin-bottom: 5px;
+}
+
+/* Lista de Projetos */
+#projetos ul {
+    list-style: none; /* Remove bullet points */
+    padding-left: 0;
+}
+
+#projetos li {
+    background: #ecf0f1;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border-left: 4px solid var(--color-primary);
+    font-size: 0.95em;
+}
+
+/* Skills Técnicas */
+#skills h4 {
+    color: var(--color-dark);
+    margin-top: 15px;
+}
+
+#skills p {
+    background: #e6f7ff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* --- 6. FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-dark);
+    color: #ecf0f1;
+    font-size: 0.85em;
+    margin-top: 30px;
+}
+
+/* --- 7. MEDIA QUERIES (Responsividade) --- */
+@media (min-width: 600px) {
+    .contact-info span {
+        display: inline-block;
+        margin: 0 15px;
+    }
+}
